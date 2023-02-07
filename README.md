@@ -82,10 +82,10 @@ conda install -c conda-forge awkward
 conda install -c conda-forge uproot-methods
 
 # install jupyterhub kernel
-cd /nfs/dust/cms/user/<username>/anaconda2/envs/particlenet #you should be here already, better to be sure
+cd /nfs/dust/cms/user/<username>/anaconda2/envs/run3 #you should be here already, better to be sure
 conda activate particlenet
 pip install ipykernel --user
-python -m ipykernel install --user --name="particlenet"
+python -m ipykernel install --user --name="run3"
 ```
 
 ### Cloning this repository
