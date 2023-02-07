@@ -1,0 +1,68 @@
+# Prerequisites
+*.d
+
+#Compiled python stuffs
+*/__init__.py*
+*/*.pyc
+*.pyc
+
+#Compiled c++ stuffs
+*/*_h.d
+*/*_h.so
+*/*_h*.pcm
+
+#Backups created by text editors
+*/\#*#
+\#*#
+*/*~
+*~
+*/*.py~
+*.py~
+
+#Undesired pdf/png
+*.pdf
+*/*.pdf
+*.png
+*/*.png
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Errors
+.__afs*
+
+# Background predictions
+python/BkgPredResults*.py
+
+# Condor folders
+condor_*
+
+# .ipynb_checkpoints
+.ipynb_checkpoints/*
