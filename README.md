@@ -78,6 +78,9 @@ conda install -c conda-forge root_numpy
 # install awkward
 conda install -c conda-forge awkward
 
+# install uproot
+conda install -c conda-forge uproot
+
 # install uproot_methods
 conda install -c conda-forge uproot-methods
 
