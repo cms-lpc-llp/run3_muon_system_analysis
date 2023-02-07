@@ -21,7 +21,7 @@ bash Anaconda2-2019.10-Linux-x86_64.sh
 # ATTENTION! When asked where to install anaconda,
 # do NOT press enter to confirm the default location,
 # but provide your dust home directory instead
-# (type: /nfs/dust/cms/user/<username>/anaconda2).
+# (type: /xxx/yyy/cms/user/<username>/anaconda2).
 
 # Answer all other prompts with the recommended option (in brackets).
 # Optional: To have an easier way to activate your conda environment,
@@ -29,7 +29,7 @@ bash Anaconda2-2019.10-Linux-x86_64.sh
 
 # load anaconda - valid for DESY only
 # IMPORTANT: You have to run this command every time you log in to NAF!
-export PATH=/nfs/dust/cms/user/<username>/anaconda2/bin:$PATH
+export PATH=/xxx/yyy/cms/user/<username>/anaconda2/bin:$PATH
 
 ```
 
@@ -44,7 +44,7 @@ conda create -n run3 python=3.9
 
 # activate the environment
 # IMPORTANT: You also need to run this command every time you log in to NAF!
-source activate /nfs/dust/cms/user/<username>/anaconda2/envs/run3
+source activate /xxx/yyy/cms/user/<username>/anaconda2/envs/run3
 ```
 
 ### Installing required packages
@@ -55,7 +55,7 @@ source activate /nfs/dust/cms/user/<username>/anaconda2/envs/run3
 # cd to your environment directory
 # Note: This is important! If you try to install packages when not in
 # your environment directory, you might get file I/O errors!
-cd /nfs/dust/cms/user/<username>/anaconda2/envs/run3/
+cd /xxx/yyy/cms/user/<username>/anaconda2/envs/run3/
 
 #install pandas (for data manipulation and analysis)
 conda install pandas
@@ -82,8 +82,8 @@ conda install -c conda-forge awkward
 conda install -c conda-forge uproot-methods
 
 # install jupyterhub kernel
-cd /nfs/dust/cms/user/<username>/anaconda2/envs/run3 #you should be here already, better to be sure
-conda activate particlenet
+cd /xxx/yyy/cms/user/<username>/anaconda2/envs/run3 #you should be here already, better to be sure
+conda activate run3
 pip install ipykernel --user
 python -m ipykernel install --user --name="run3"
 ```
@@ -94,5 +94,5 @@ python -m ipykernel install --user --name="run3"
 cd /xxx/yyy/cms/user/<username>
 mkdir XXX #this is just my personal choice
 cd XXX
-git clone https://github.com/lbenato/ParticleNet-LLP-fork.git
+git clone https://github.com/cms-lpc-llp/run3_muon_system_analysis.git
 ```
