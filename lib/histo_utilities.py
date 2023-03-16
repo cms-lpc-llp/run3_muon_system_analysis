@@ -67,6 +67,8 @@ def create_TH1D(x, name='h', title=None, binning=[None, None, None], weights=Non
             h = rt.TH1D(name, title, len(binning)-1, array('f',binning))
         else:
             h = rt.TH1D(name, title, binning[0], binning[1], binning[2])
+        h.Sumw2()
+        h.SetTitle(title)
     else:
         h = h2clone.Clone(name)
         h.SetTitle(title)
