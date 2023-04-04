@@ -3,6 +3,7 @@ import ROOT as rt
 import root_numpy as rtnp
 import matplotlib.pyplot as plt
 from array import array
+import math
 
 std_color_list = [1, 2, 4, 8, 6, 28, 43, 7, 25, 36, 30, 40, 42, 49, 46, 38, 32, 800, 600, 900, 870, 840]
 
@@ -606,3 +607,19 @@ def create_TGraph(x,y,ex=[],ey=[], axis_title = ['','']):
     	gr.GetXaxis().SetTitle(axis_title[0])
     	gr.GetYaxis().SetTitle(axis_title[1])
     return gr
+
+def addOverflow(hist, addUnder=True):
+
+    n = hist.GetNbinsX()
+    hist.SetBinContent(n, hist.GetBinContent(n) + hist.GetBinContent(n+1))
+    hist.SetBinError(n, math.sqrt( hist.GetBinError(n)**2 + hist.GetBinError(n+1)**2 ) )
+    hist.SetBinContent(n+1, 0.)
+    hist.SetBinError(n+1, 0.)
+
+    if addUnder:
+        hist.SetBinContent(1, hist.GetBinContent(0) + hist.GetBinContent(1))
+        hist.SetBinError(1, math.sqrt( hist.GetBinError(0)**2 + hist.GetBinError(1)**2 ) )
+        hist.SetBinContent(0, 0.)
+        hist.SetBinError(0, 0.)
+
+    return 0
