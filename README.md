@@ -80,6 +80,9 @@ conda install -c conda-forge root
 # install root_numpy
 conda install -c conda-forge root_numpy
 
+# If having issues:
+#pip install --user root_numpy
+
 # install awkward
 conda install -c conda-forge awkward
 
