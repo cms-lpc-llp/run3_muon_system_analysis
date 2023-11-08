@@ -82,6 +82,8 @@ conda install -c conda-forge root_numpy
 
 # If having issues:
 #pip install --user root_numpy
+conda config --add channels conda-forge
+conda config --set channel_priority strict
 
 # install awkward
 conda install -c conda-forge awkward
