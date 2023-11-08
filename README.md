@@ -71,6 +71,8 @@ conda install pytables
 conda install scikit-learn
 
 # install ROOT
+#conda config --set solver libmamba
+#conda config --set solver classic
 conda config --remove channels conda-forge
 conda config --add channels conda-forge
 conda install -c conda-forge root
