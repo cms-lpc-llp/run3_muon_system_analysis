@@ -71,6 +71,8 @@ conda install pytables
 conda install scikit-learn
 
 # install ROOT
+conda config --remove channels conda-forge
+conda config --add channels conda-forge
 conda install -c conda-forge root
 
 # install root_numpy
